@@ -1,0 +1,512 @@
+/* đổi màu body */
+body {
+    background-color: #C1E7F1; /* Replace with your desired background color */
+  }
+  /* header */
+  /* logo */
+  .logo{
+    width: 112px;
+    height: 60px;
+    flex-shrink: 0;
+    left: 60px;
+    position:absolute;
+    margin-bottom: 10px;
+    margin-top: -10px;
+  }
+  
+  .header {
+    background-color: #C1E7F1;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-logo {
+    display: flex;
+  }
+  
+  .search-bar {
+    width: 500px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 4px;
+    margin-left: 250px;
+  }
+  
+  .search-bar input {
+    border: none;
+    outline: none;
+    padding: 4px;
+    width: 450px;
+  }
+  
+  .search-icon:before {
+    display: inline-block;
+    height: 10px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    margin-top: 5px;
+    margin-left: 500px;
+  }
+  .search-icon {
+    display: inline-block;
+    transition: transform 0.3s;
+  }
+  
+  .search-icon:hover {
+    transform: scale(1.1); /* Adjust the scale factor as desired */
+    cursor: pointer;
+  }
+  
+  .search-icon:active {
+    color: #27cdf7;
+  }
+  /* những icon trên header */
+  .header-icons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-icons > div {
+    margin-left: 10px;
+  }
+  
+  .header-icons a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+   /* menu */
+  .menu {
+    list-style-type: none;
+    list-style: none;
+    padding: 8px;
+    background-color: #004EAD;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .menu-item {
+    margin-right: 30px;
+  }
+  
+  .menu-item a {
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+  }
+  
+  .menu-item.active a {
+    background-color: #27cdf7;
+  }
+  
+  .menu-item:hover:not(.active) a {
+    background-color: rgb(155, 223, 214);
+  }
+  /*menu con dưới product category*/
+  .dropdown-submenu {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown a {
+    margin-right: 30px;
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+  }
+  
+  .dropdown-submenu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-submenu a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-submenu {display: block;}
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    color: hotpink ;
+  }
+  
+  /* khung chứa các category */
+  .category-container {
+    position: relative;
+    background-color: #C1E7F1;
+    width: auto;
+    display: flex; /* Sử dụng flexbox để căn giữa hình ảnh */
+    flex-direction: row;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; 
+  }
+  /* khung chứa các hình trong category */
+  .category-frame {
+    display: inline-block;
+    width: 216px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 30px;
+    background: white;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s; /* Thêm hiệu ứng chuyển đổi */
+  
+  }
+  
+  .category-frame:hover {
+    transform: scale(1.1); /* Phóng to lên 1.1 lần khi di chuột vào */
+  }
+  
+  .category-text {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    color: black;
+    font-size: 18px;
+  }
+  
+  .category-image {
+    width: 195px;
+    height: 180px;
+    margin: auto; /* Add this line to center the image horizontally */
+    margin-bottom: 50px;
+    opacity: 0.80;
+  }
+  /* product */
+  .product-slider-title {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  
+  .product-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .product-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .product-item {
+    width: 200px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  .product-name a {
+    text-decoration: none;
+    color:#026287
+  }
+  
+  .product-name a:hover {
+    color: red;
+  }
+  .product-image {
+    border: 0.5px solid #026287;
+    background-color: white;
+    width: 180px; /* Điều chỉnh kích thước khung hình ảnh */
+    height: 180px;
+    /* display: flex; Sử dụng flexbox để căn chỉnh hình ảnh */
+    justify-content: center; /* Căn giữa hình ảnh theo chiều ngang */
+    align-items: center; /* Căn giữa hình ảnh theo chiều dọc */
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    margin: 0;
+  }
+  .product-image img {
+    transition: transform 0.3s;
+  }
+  
+  .product-image img:hover {
+    transform: scale(1.1); /* di chuột vào thì hình sẽ phóng to lên */
+  }
+  
+  .product-container {
+    position: relative;
+    background-color: white;
+    border-radius: 60px;
+    padding: 10px 10px 10px 10px;
+    margin: 0 100px 100px 100px;
+    width: auto;
+    height: 400px;
+    display: flex; /* Sử dụng flexbox để căn giữa hình ảnh */
+    flex-direction: column;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; 
+  }
+  
+  .product-details {
+    /* text-align: center; */
+    background-color:#ECF8F9;
+    color: #026287;
+    padding: 10px;
+    /* margin-top: 10px; */
+    height: 70px; /* Điều chỉnh kích thước khung chứa */
+    width: 180px; /* Điều chỉnh chiều ngang khung chứa */
+    /* display: flex; */
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #AEE2FF;
+    border-radius: 0 0 5px 5px;
+    overflow: hidden;
+  }
+  .product-name,
+  .product-price {
+  margin: 10px; /* Loại bỏ margin mặc định */
+  font-size: 13px;
+  word-wrap: break-word;
+  text-align: center;
+  }
+  .product-image,
+  .product-details {
+  padding: 0px;
+  }
+  .shop-now-button {
+    background-color: #4CB4E0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 50px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  
+  }
+  .shop-now-button:hover {
+    background-color: #232957;
+  }
+  .shop-now-button:active {
+    background-color: #ffeb3b;
+  }
+  /* dành cho bestseller */
+  .product-slider-title-2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: -50px;
+  }
+  .product-container-2{
+    position: relative;
+    background-color: white;
+    border-radius: 60px;
+    padding: 10px 10px 10px 10px;
+    margin: 0px 100px 50px 100px;
+    width: auto;
+    height: 700px;
+    display: flex; /* Sử dụng flexbox để căn giữa hình ảnh */
+    flex-direction: column;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; 
+  }
+  /* what our clients say about us */
+  
+  .testimonial-section {
+    background-color: #232957;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .testimonial-title {
+    width: 100%;
+    font-size: 24px;
+    color: #FFF;
+    margin-bottom: 20px;
+  }
+  
+  .testimonial-container {
+    background-color: #FFF;
+    padding: 20px;
+    margin-bottom: 20px;
+    flex: 1;
+    max-width: 400px;
+    margin-right: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .testimonial-text {
+    font-size: 18px;
+    text-align: justify;
+    color: black;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+    line-height: 25px;
+  
+  }
+  
+  .testimonial-details {
+    display: flex;
+    align-items: center;
+  }
+  
+  .testimonial-image {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-left: 30px;
+  }
+  
+  .avatar-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .testimonial-author {
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+    margin-top: 5px;
+  }
+  
+  /* subcribe */
+  
+  .icon-wrapper {
+    margin-right: 10px;
+  }
+  
+  .email {
+    font-size: 24px;
+  }
+  
+  .subscribe-text {
+    margin: 0;
+  }
+  .subscribe-section {
+    display: flex;
+    align-items: center; /* Center vertically */
+    width: 100%;
+    height: 80px;
+    flex-shrink: 0;
+    background: #004EAD;
+    margin-top: 80px;
+  }
+  
+  .subscribe {
+    margin-left: 100px;
+    display: flex;
+    align-items: center;
+    color: #FFF;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-right: 0px; /* khoảng cách giữa icon và text*/
+  }
+  .subscribe-bar {
+    flex-grow: 1; /* Allow the subscribe bar to grow and take up remaining space */
+    margin-left: 150px;
+  }
+  .subscribe-button{
+    width: 80px;
+    height: 35px;
+    flex-shrink: 0;
+    border: none;
+    border-radius: 10px;
+    background: #35C2F1;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin-right: 180px;
+  }
+  .subscribe-button:hover {
+    background-color: #232957;
+  }
+  .subscribe-button:active {
+    background-color: #ffeb3b;
+  }
+  .subscribe-bar input[type="text"] {
+    width: 400px;
+    height: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+  /* footer */
+  .logo_footer{
+    width: 120px;
+    height: 70px;
+    flex-shrink: 0;
+    left: 60px;
+    position:absolute;
+    margin-bottom: 10px;
+    margin-top: 15px;
+  }
+  
+  footer {
+    display: flex;
+    margin-left: 30px;
+  }
+  
+  .footer-column {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .footer-column h3 {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .blue-icon {
+    color: #004EAD;
+  }
+  .social-icons a i,
+  .payment-icons a {
+    margin-left: 30px;
+    margin-top: 120px;
+    font-size: 30px;
+  }
+  .payment-icons{
+    font-size: 30px ;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  ul li {
+    margin-bottom: 5px;
+    color: #ff0000;
+  
+  }
+  
+  ul li a {
+    color: #000;
+    text-decoration: none;
+  }
+  .subscribe-h3{
+    color: #004EAD;
+    font-size: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+  }
+  
